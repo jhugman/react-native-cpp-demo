@@ -1,3 +1,25 @@
+# React Native C++ Demo
+
+This repo is a demo of running C++ code from a React Native app as a TurboModule, using Codegen.
+
+It is taken from the [`run/pure-cxx-sample` branch](https://github.com/react-native-community/RNNewArchitectureApp/tree/run/pure-cxx-module) of the [`react-native-community/RNNewArchitectureApp` demo app](https://github.com/react-native-community/RNNewArchitectureApp).
+
+It is lightly edited to the 0.73 release of `react-native`, from the `0.71.0-rc` branch.
+
+### Useful commands
+
+Re-running codegen for iOS. Needs to be done each time switching from Android to iOS.
+
+```sh
+(cd ios && RCT_NEW_ARCH_ENABLED=1 /opt/homebrew/opt/ruby/bin/bundle exec pod install)
+```
+
+Clearing watchman. This needs to be done each time you switch branch, or upgrade a project in `package.json`.
+
+```sh
+watchman watch-del "$(pwd)" && watchman watch-project "$(pwd)"
+```
+
 # React Native New Architecture Sample
 
 This repo contains several branches that will help you understand how to setup your project for the **React Native New Architecture**. This should considered as a support material of [the official migration guide](https://reactnative.dev/docs/next/new-architecture-intro).
